@@ -28,6 +28,7 @@ class Library:
             print("Book added successfully!")
         except sqlite3.IntegrityError:
             print("Book ID already exists!")
+            
 
     def view_books(self):
         self.cursor.execute("SELECT * FROM books")
@@ -39,6 +40,7 @@ class Library:
             for book in books:
                 status = "Issued" if book[3] else "Available"
                 print(f"{book[0]}: {book[1]} by {book[2]} [{status}]")
+                
 
     def issue_book(self, book_id):
         self.cursor.execute("SELECT is_issued FROM books WHERE book_id = ?", (book_id,))
