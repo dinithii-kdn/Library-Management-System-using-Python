@@ -10,6 +10,7 @@ class Book:
     def __str__(self):
         status = "Issued" if self.is_issued else "Available"
         return f"{self.book_id}: {self.title} by {self.author} [{status}]"
+        
 
 
 class Library:
