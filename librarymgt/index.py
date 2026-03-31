@@ -4,7 +4,8 @@ class Book:
         self.title = title
         self.author = author
         self.is_issued = False
-        
+
+    
 
     def __str__(self):
         status = "Issued" if self.is_issued else "Available"
