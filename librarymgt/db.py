@@ -1,5 +1,6 @@
 import sqlite3
 
+
 class Library:
     def __init__(self):
         self.conn = sqlite3.connect("library.db")
