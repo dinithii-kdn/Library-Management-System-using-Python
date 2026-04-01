@@ -5,9 +5,7 @@ class Book:
         self.author = author
         self.is_issued = False
 
-    
-
-    def __str__(self):
+     def __str__(self):
         status = "Issued" if self.is_issued else "Available"
         return f"{self.book_id}: {self.title} by {self.author} [{status}]"
         
