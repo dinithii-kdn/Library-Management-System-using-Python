@@ -73,10 +73,12 @@ def main():
         elif choice == "2":
             library.view_books()
 
+        
         elif choice == "3":
             book_id = input("Enter Book ID to issue: ")
             library.issue_book(book_id)
 
+    
         elif choice == "4":
             book_id = input("Enter Book ID to return: ")
             library.return_book(book_id)
@@ -87,6 +89,7 @@ def main():
 
         else:
             print("Invalid choice! Try again.")
+        
 
 
 if __name__ == "__main__":
