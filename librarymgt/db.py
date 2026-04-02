@@ -6,6 +6,7 @@ class Library:
         self.conn = sqlite3.connect("library.db")
         self.cursor = self.conn.cursor()
         self.create_table()
+        
 
     def create_table(self):
         self.cursor.execute("""
