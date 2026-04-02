@@ -46,6 +46,7 @@ class Library:
     def issue_book(self, book_id):
         self.cursor.execute("SELECT is_issued FROM books WHERE book_id = ?", (book_id,))
         result = self.cursor.fetchone()
+        
 
         if not result:
             print("Book not found!")
