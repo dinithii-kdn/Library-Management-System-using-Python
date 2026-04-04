@@ -43,6 +43,7 @@ class Library:
                 status = "Issued" if book[3] else "Available"
                 print(f"{book[0]}: {book[1]} by {book[2]} [{status}]")
                 
+                
 
     def issue_book(self, book_id):
         self.cursor.execute("SELECT is_issued FROM books WHERE book_id = ?", (book_id,))
